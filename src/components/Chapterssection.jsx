@@ -60,7 +60,7 @@ const ChaptersSection = () => {
         justifyContent: 'center',
         backgroundColor: '#0F0819',
         fontFamily: "'Poppins', sans-serif",
-        padding: '100px 20px'
+        padding: 'clamp(60px, 12vw, 100px) clamp(16px, 4vw, 20px)'
       }}
     >
       {/* Decorative elements */}
@@ -69,8 +69,8 @@ const ChaptersSection = () => {
           position: 'absolute',
           top: '10%',
           left: '5%',
-          width: '300px',
-          height: '300px',
+          width: 'clamp(200px, 40vw, 300px)',
+          height: 'clamp(200px, 40vw, 300px)',
           background: 'radial-gradient(circle, rgba(239, 90, 7, 0.1) 0%, transparent 70%)',
           borderRadius: '50%',
           pointerEvents: 'none'
@@ -81,8 +81,8 @@ const ChaptersSection = () => {
           position: 'absolute',
           bottom: '10%',
           right: '5%',
-          width: '400px',
-          height: '400px',
+          width: 'clamp(250px, 50vw, 400px)',
+          height: 'clamp(250px, 50vw, 400px)',
           background: 'radial-gradient(circle, rgba(32, 81, 77, 0.1) 0%, transparent 70%)',
           borderRadius: '50%',
           pointerEvents: 'none'
@@ -98,7 +98,7 @@ const ChaptersSection = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '80px'
+          gap: 'clamp(50px, 10vw, 80px)'
         }}
       >
         
@@ -112,18 +112,19 @@ const ChaptersSection = () => {
             textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',
-            gap: '20px'
+            gap: 'clamp(16px, 3vw, 20px)',
+            padding: '0 clamp(16px, 4vw, 20px)'
           }}
         >
           <h2
             style={{
-              fontSize: 'clamp(1.25rem, 3vw, 1.5rem)',
+              fontSize: 'clamp(0.875rem, 2.5vw, 1.5rem)',
               fontWeight: '700',
               color: '#EF5A07',
               fontFamily: "'Poppins', sans-serif",
               margin: 0,
               textTransform: 'uppercase',
-              letterSpacing: '2px'
+              letterSpacing: 'clamp(1px, 0.3vw, 2px)'
             }}
           >
             COMO APRENDER UM IDIOMA | O MÉTODO POLIGLOTA
@@ -131,7 +132,7 @@ const ChaptersSection = () => {
           
           <h3
             style={{
-              fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+              fontSize: 'clamp(1.75rem, 5vw, 3.5rem)',
               fontWeight: '700',
               color: '#F0CFB6',
               fontFamily: "'Poppins', sans-serif",
@@ -148,9 +149,9 @@ const ChaptersSection = () => {
           style={{
             width: '100%',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-            gap: '40px',
-            padding: '0 20px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
+            gap: 'clamp(24px, 5vw, 40px)',
+            padding: '0'
           }}
         >
           {chapters.map((chapter, index) => (
@@ -159,7 +160,7 @@ const ChaptersSection = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+              transition={{ duration: 0.6, delay: index * 0.08, ease: "easeOut" }}
               whileHover={{ 
                 y: -5,
                 transition: { duration: 0.3 }
@@ -168,11 +169,11 @@ const ChaptersSection = () => {
                 position: 'relative',
                 backgroundColor: 'rgba(29, 18, 37, 0.6)',
                 border: '1px solid rgba(193, 161, 145, 0.15)',
-                borderRadius: '16px',
-                padding: '32px',
+                borderRadius: 'clamp(12px, 2vw, 16px)',
+                padding: 'clamp(24px, 4vw, 32px)',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '16px',
+                gap: 'clamp(12px, 2vw, 16px)',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
                 backdropFilter: 'blur(10px)'
@@ -182,9 +183,9 @@ const ChaptersSection = () => {
               <div 
                 style={{
                   position: 'absolute',
-                  top: '20px',
-                  right: '20px',
-                  fontSize: '3rem',
+                  top: 'clamp(16px, 3vw, 20px)',
+                  right: 'clamp(16px, 3vw, 20px)',
+                  fontSize: 'clamp(2rem, 8vw, 3rem)',
                   fontWeight: '900',
                   color: 'rgba(239, 90, 7, 0.15)',
                   fontFamily: "'Poppins', sans-serif",
@@ -197,7 +198,7 @@ const ChaptersSection = () => {
               {/* Chapter Label */}
               <span 
                 style={{
-                  fontSize: '0.875rem',
+                  fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)',
                   fontWeight: '600',
                   color: '#EF5A07',
                   fontFamily: "'Poppins', sans-serif",
@@ -211,13 +212,13 @@ const ChaptersSection = () => {
               {/* Chapter Title */}
               <h4 
                 style={{
-                  fontSize: 'clamp(1.25rem, 2vw, 1.5rem)',
+                  fontSize: 'clamp(1.125rem, 2.5vw, 1.5rem)',
                   fontWeight: '600',
                   color: '#F0CFB6',
                   fontFamily: "'Poppins', sans-serif",
                   margin: 0,
                   lineHeight: '1.3',
-                  paddingRight: '60px'
+                  paddingRight: 'clamp(40px, 10vw, 60px)'
                 }}
               >
                 {chapter.title}
@@ -226,7 +227,7 @@ const ChaptersSection = () => {
               {/* Chapter Description */}
               <p 
                 style={{
-                  fontSize: 'clamp(0.875rem, 1.5vw, 1rem)',
+                  fontSize: 'clamp(0.8125rem, 1.8vw, 1rem)',
                   fontWeight: '300',
                   color: '#C1A191',
                   fontFamily: "'Poppins', sans-serif",
@@ -240,11 +241,11 @@ const ChaptersSection = () => {
               {/* Decorative line */}
               <div 
                 style={{
-                  width: '60px',
-                  height: '3px',
+                  width: 'clamp(50px, 12vw, 60px)',
+                  height: 'clamp(2px, 0.5vw, 3px)',
                   backgroundColor: '#EF5A07',
                   borderRadius: '2px',
-                  marginTop: '8px'
+                  marginTop: 'clamp(6px, 1.5vw, 8px)'
                 }}
               />
             </motion.div>
