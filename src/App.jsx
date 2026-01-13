@@ -6,8 +6,8 @@ import TestimonialsSection from './components/Testimonialssection';
 import PersonalExperience from './components/Personalexperience';
 import FinalCTA from './components/Finalcta';
 import AboutSection from './components/Aboutsection';
-import FAQSection from './components/FAQSection';
-import ContactSection from './components/ContactSection';
+import FAQSection from './components/Faqsection';
+import ContactSection from './components/Contactsection';
 
 function App() {
   return (
