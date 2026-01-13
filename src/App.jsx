@@ -1,5 +1,5 @@
 import Hero from './components/Hero';
-import EbookPresentation from './components/EbookPresentation';
+import EbookPresentation from './components/Ebookpresentation';
 import ChaptersSection from './components/ChaptersSection';
 import BonusSection from './components/BonusSection';
 import TestimonialsSection from './components/Testimonialssection';

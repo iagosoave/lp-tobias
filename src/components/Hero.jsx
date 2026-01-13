@@ -148,7 +148,7 @@ const Hero = () => {
                       height: '100%',
                       border: 'none'
                     }}
-                    src={`https://www.youtube.com/embed/${videoId}?controls=1&modestbranding=1&rel=0&showinfo=0&playsinline=1`}
+                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=1&modestbranding=1&rel=0&showinfo=0&playsinline=1`}
                     title="Vídeo Introdutório"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
